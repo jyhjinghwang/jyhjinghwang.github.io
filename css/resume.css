@@ -165,7 +165,8 @@ section.resume-section .resume-item .resume-date {
     min-height: 100vh;
   }
   section.resume-section .resume-item .resume-date {
-    min-width: 18rem;
+    max-width: 20rem;
+    max-height: 20rem;
   }
 }
 
