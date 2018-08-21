@@ -6,7 +6,7 @@
 <meta name="robots" content="index,follow">
 <meta name="description" content="Semantic segmentation has made much progress with increasingly powerful pixel-wise classifiers and incorporating structural priors via Conditional Random Fields (CRF) or Generative Adversarial Networks (GAN). We propose a simpler alternative that learns to verify the spatial structure of segmentation during training only. Unlike existing approaches that enforce semantic labels on individual pixels and match labels between neighbouring pixels, we propose the concept of Adaptive Affinity Fields (AAF) to capture and match the semantic relations between neighbouring pixels in the label space. We use adversarial learning to select the optimal affinity field size for each semantic category. It is formulated as a minimax problem, optimizing our segmentation neural network in a best worst-case learning scenario. AAF is versatile for representing structures as a collection of pixel-centric relations, easier to train than GAN and more efficient than CRF without run-time inference. Our extensive evaluations on PASCAL VOC 2012, Cityscapes, and GTA5 datasets demonstrate its above-par segmentation performance and robust generalization across domains.">
 <meta name="keywords" content="semantic segmentation; affinity field; adversarial learning;">
-<link rel="author" href="https://liuziwei7.github.io/">
+<link rel="author" href="https://jyhjinghwang.github.io/">
 
 <!-- Fonts and stuff -->
 <link href="./aaf/css" rel="stylesheet" type="text/css">
@@ -54,17 +54,15 @@ Semantic segmentation has made much progress with increasingly powerful pixel-wi
   <h2>Materials</h2>
   <center>
     <ul>
-
-          <li class="grid">
+      <li class="grid">
         <div class="griditem">
-    <a href="https://arxiv.org/abs/1803.10335" target="_blank" class="imageLink"><img src="./aaf/paper.jpg"></a><br>
-      <a href="https://arxiv.org/abs/1803.10335" target="_blank">Paper</a>
-    </div>
-        </li>
-
-      </ul>
-      </center>
-      </div>
+	  <a href="https://arxiv.org/abs/1803.10335" target="_blank" class="imageLink"><img src="./aaf/paper.jpg"></a><br>
+          <a href="https://arxiv.org/abs/1803.10335" target="_blank">Paper</a>
+        </div>
+      </li>
+    </ul>
+  </center>
+</div>
 
 <br>
 
@@ -72,17 +70,21 @@ Semantic segmentation has made much progress with increasingly powerful pixel-wi
   <h2>Code and Models</h2>
   <center>
     <ul>
-
-          <li class="grid">
+      <li class="grid">
         <div class="griditem">
-    <a href="" target="_blank" class="imageLink"><img src="./aaf/code.png"></a><br>
-      <a href="" target="_blank">Code and Models</a>
-    </div>
-        </li>
-
-      </ul>
-      </center>
-      </div>
+	  <a href="" target="_blank" class="imageLink"><img src="./aaf/code.png"></a><br>
+          <a href="" target="_blank">Code</a>
+        </div>
+      </li>
+      <li class="grid">
+	<div class="griditem">
+          <a href="https://drive.google.com/drive/folders/1ZgNsIIc3MKf0BcGcEqt0dtNAmhSYiOiT" target="_blank" class="imageLink"><img src="./aaf/drive.png"></a><br>
+          <a href="https://drive.google.com/drive/folders/1ZgNsIIc3MKf0BcGcEqt0dtNAmhSYiOiT" target="_blank">Test Set Models</a>
+        </div>
+      </li>
+    </ul>
+  </center>
+</div>
 
 <br>
 
@@ -97,6 +99,20 @@ Semantic segmentation has made much progress with increasingly powerful pixel-wi
  year = {2018}
 }</pre>
     </div>
-      </div>
+</div>
+
+<br>
+
+<div class="section materials">
+  <h2>PASCAL VOC 2012 Validation Set Results</h2>
+    <center><img src="./aaf/voc_results.png" border="0" width="90%"></center>
+</div>
+
+<br>
+
+<div class="section materials">
+  <h2>Cityscapes Validation Set Results</h2>
+    <center><img src="./aaf/cityscapes_results.png" border="0" width="90%"></center>
+</div>
 
 </body></html>
