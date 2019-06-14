@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Adversarial Structure Matching for Structured Prediction Tasks</title>
+
+<!-- Meta tags for search engines to crawl -->
+<meta name="robots" content="index,follow">
+<meta name="description" content="Pixel-wise losses, e.g., cross-entropy or L2, have been widely used in structured prediction tasks as a spatial extension of generic image classification or regression. However, its i.i.d. assumption neglects the structural regularity present in natural images. Various attempts have been made to incorporate structural reasoning mostly through structure priors in a cooperative way where co-occurring patterns are encouraged. 
+We, on the other hand, approach this problem from an opposing angle and propose a new framework, Adversarial Structure Matching (ASM), for training such structured prediction networks via an adversarial process, in which we train a structure analyzer that provides the supervisory signals, the ASM loss. The structure analyzer is trained to maximize the ASM loss, or to emphasize recurring multi-scale hard negative structural mistakes among co-occurring patterns. On the contrary, the structured prediction network is trained to reduce those mistakes and is thus enabled to distinguish fine-grained structures. As a result, training structured prediction networks using ASM reduces contextual confusion among objects and improves boundary localization. We demonstrate that our ASM outperforms pixel-wise IID loss or structural prior GAN loss on three different structured prediction tasks: semantic segmentation, monocular depth estimation, and surface normal prediction.">
+<meta name="keywords" content="structured prediction tasks; image structure modeling; semantic segmentation; monocular depth estimation; surface normal prediction; adversarial learning;">
+<link rel="author" href="https://jyhjinghwang.github.io/">
+
+<!-- Fonts and stuff -->
+<link href="./aaf/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./aaf/project.css" media="screen">
+<link rel="stylesheet" type="text/css" media="screen" href="./aaf/iconize.css">
+<script async="" src="./aaf/prettify.js"></script>
+
+
+</head>
+
+<body>
+  <div id="content">
+    <div id="content-inner">
+
+      <div class="section head">
+  <h1>Adversarial Structure Matching for Structured Prediction Tasks</h1>
+
+  <div class="authors">
+    <a href="https://jyhjinghwang.github.io/">Jyh-Jing Hwang</a>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://twke18.github.io/">Tsung-Wei Ke</a>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="http://www.cis.upenn.edu/~jshi/">Jianbo Shi</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="http://www1.icsi.berkeley.edu/~stellayu/">Stella X. Yu</a>
+  </div>
+
+  <div class="affiliations">
+    <a href="https://www.berkeley.edu/">UC Berkeley / </a>
+    <a href="https://www.icsi.berkeley.edu/icsi/">ICSI</a> and
+    <a href="https://www.upenn.edu/"> University of Pennsylvania</a>
+  </div>
+
+  <div class="venue">IEEE Conference on Computer Vision and Pattern Recognition (<a href="http://cvpr2019.thecvf.com/" target="_blank">CVPR</a>) 2019</div>
+      </div>
+
+
+      <center><img src="./asm/arch.png" border="0" width="90%"></center>
+
+<div class="section abstract">
+  <h2>Abstract</h2>
+  <br>
+  <p>
+      Pixel-wise losses, e.g., cross-entropy or L2, have been widely used in structured prediction tasks as a spatial extension of generic image classification or regression. However, its i.i.d. assumption neglects the structural regularity present in natural images. Various attempts have been made to incorporate structural reasoning mostly through structure priors in a cooperative way where co-occurring patterns are encouraged.
+<br> <br>
+We, on the other hand, approach this problem from an opposing angle and propose a new framework, Adversarial Structure Matching (ASM), for training such structured prediction networks via an adversarial process, in which we train a structure analyzer that provides the supervisory signals, the ASM loss. The structure analyzer is trained to maximize the ASM loss, or to emphasize recurring multi-scale hard negative structural mistakes among co-occurring patterns. On the contrary, the structured prediction network is trained to reduce those mistakes and is thus enabled to distinguish fine-grained structures. As a result, training structured prediction networks using ASM reduces contextual confusion among objects and improves boundary localization. We demonstrate that our ASM outperforms pixel-wise IID loss or structural prior GAN loss on three different structured prediction tasks: semantic segmentation, monocular depth estimation, and surface normal prediction.
+  </p>
+      </div>
+
+<div class="section materials">
+  <h2>Materials</h2>
+  <center>
+    <ul>
+      <li class="grid">
+        <div class="griditem">
+	  <a href="./asm/asm_paper.pdf" target="_blank" class="imageLink"><img src="./asm/paper.jpg"></a><br>
+          <a href="./asm/asm_paper.pdf" target="_blank">Paper</a>
+        </div>
+      </li>
+      <li class="grid">
+        <div class="griditem">
+    <a href="./asm/asm_poster.pdf" target="_blank" class="imageLink"><img src="./asm/asm_poster.jpg"></a><br>
+          <a href="./asm/asm_poster.pdf" target="_blank">Poster</a>
+        </div>
+      </li>
+    </ul>
+  </center>
+</div>
+
+<br>
+
+<div class="section code">
+  <h2>Code and Models</h2>
+  <center>
+    <ul>
+      <li class="grid">
+        <div class="griditem">
+	  <a href="" target="_blank" class="imageLink"><img src="./common/code.png"></a><br>
+          <a href="" target="_blank">Code</a> (coming soon)
+        </div>
+      </li>
+      <li class="grid">
+	<div class="griditem">
+          <a href="" target="_blank" class="imageLink"><img src="./common/drive.png"></a><br>
+          <a href="" target="_blank">Models</a> (coming soon)
+        </div>
+      </li>
+    </ul>
+  </center>
+</div>
+
+<br>
+
+<div class="section citation">
+  <h2>Citation</h2>
+  <div class="section bibtex">
+    <pre>@inproceedings{asm2019,
+ author = {Hwang, Jyh-Jing and Ke, Tsung-Wei and Shi, Jianbo and Yu, Stella X.},
+ title = {Adversarial Structure Matching for Structured Prediction Tasks},
+ booktitle = {Computer Vision and Pattern Recognition (CVPR)},
+ month = {June},
+ year = {2019}
+}</pre>
+    </div>
+</div>
+
+<br>
+
+<div class="section materials">
+  <h2>Semantic Segmentation on PASCAL VOC 2012</h2>
+    <center><img src="./asm/seg_results_all.png" border="0" width="90%"></center>
+</div>
+
+<br>
+
+<div class="section materials">
+  <h2>Surface Normal Prediction on Stanford-2D-3D-Semantic</h2>
+    <center><img src="./asm/normal_results_all.png" border="0" width="90%"></center>
+</div>
+
+<div class="section materials">
+  <h2>Monocular Depth Estimation on Stanford-2D-3D-Semantic</h2>
+    <center><img src="./asm/depth_results_all.png" border="0" width="90%"></center>
+</div>
+
+</body></html>
