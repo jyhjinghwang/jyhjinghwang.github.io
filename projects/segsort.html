@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SegSort: Segmentation by Discriminative Sorting of Segments</title>
+
+<!-- Meta tags for search engines to crawl -->
+<meta name="robots" content="index,follow">
+<meta name="description" content="Almost all existing deep learning approaches for semantic segmentation tackle this task as a pixel-wise classification problem.  Yet humans understand a scene not in terms of pixels, but by decomposing it into perceptual groups and structures that are the basic building blocks of recognition.  This motivates us to propose an end-to-end pixel-wise metric learning approach that mimics this process.  In our approach, the optimal visual representation determines the right segmentation within individual images and associates segments with the same semantic classes across images.  The core visual learning problem is therefore to maximize the similarity within segments and minimize  the similarity between segments.  Given a model trained this way, inference is performed consistently by extracting pixel-wise embeddings and clustering, with the semantic label determined by the majority vote of its nearest neighbors from an annotated set.
+As a result, we present the SegSort, as a first attempt using deep learning for unsupervised semantic segmentation, achieving $76\%$ performance of its supervised counterpart.  When supervision is available, SegSort shows consistent improvements over conventional approaches based on pixel-wise softmax training.  Additionally, our approach produces more precise boundaries and consistent region predictions.  The proposed SegSort further produces an interpretable result, as each choice of label can be easily understood from the retrieved nearest segments.">
+<meta name="keywords" content="semantic segmentation; metric learning; unsupervised learning">
+<link rel="author" href="https://jyhjinghwang.github.io/">
+
+<!-- Fonts and stuff -->
+<link href="./segsort/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./segsort/project.css" media="screen">
+<link rel="stylesheet" type="text/css" media="screen" href="./segsort/iconize.css">
+<script async="" src="./segsort/prettify.js"></script>
+
+
+</head>
+
+<body>
+  <div id="content">
+    <div id="content-inner">
+
+      <div class="section head">
+  <h1>SegSort: Segmentation by Discriminative Sorting of Segments</h1>
+
+  <div class="authors">
+    <a href="https://jyhjinghwang.github.io/">Jyh-Jing Hwang</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="http://www1.icsi.berkeley.edu/~stellayu/">Stella X. Yu</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://www.cis.upenn.edu/~jshi/">Jianbo Shi</a>
+    <br>
+    	Maxwell D. Collins &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	Tien-Ju Yang &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	Xiao Zhang &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="http://liangchiehchen.com/">Liang-Chieh Chen</a>
+  </div>
+
+  <div class="affiliations">
+    <a href="https://www.berkeley.edu/">UC Berkeley</a> / 
+    <a href="https://www.icsi.berkeley.edu/icsi/">ICSI</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://www.upenn.edu/">UPenn</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://ai.google/research/">Google Research</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://www.mit.edu/">MIT</a>
+  </div>
+
+  <div class="venue">International Conference on Computer Vision (<a href="http://iccv2019.thecvf.com/" target="_blank">ICCV</a>) 2019</div>
+      </div>
+
+
+      <center><img src="./segsort/main.png" border="0" width="90%"></center>
+
+<div class="section abstract">
+  <h2>Abstract</h2>
+  <br>
+  <p>
+Almost all existing deep learning approaches for semantic segmentation tackle this task as a pixel-wise classification problem.  Yet humans understand a scene not in terms of pixels, but by decomposing it into perceptual groups and structures that are the basic building blocks of recognition.  This motivates us to propose an end-to-end pixel-wise metric learning approach that mimics this process.  In our approach, the optimal visual representation determines the right segmentation within individual images and associates segments with the same semantic classes across images.  The core visual learning problem is therefore to maximize the similarity within segments and minimize the similarity between segments.  Given a model trained this way, inference is performed consistently by extracting pixel-wise embeddings and clustering, with the semantic label determined by the majority vote of its nearest neighbors from an annotated set.
+<br>
+<br>
+As a result, we present the SegSort, as a first attempt using deep learning for unsupervised semantic segmentation, achieving 76% performance of its supervised counterpart.  When supervision is available, SegSort shows consistent improvements over conventional approaches based on pixel-wise softmax training.  Additionally, our approach produces more precise boundaries and consistent region predictions.  The proposed SegSort further produces an interpretable result, as each choice of label can be easily understood from the retrieved nearest segments.
+  </p>
+      </div>
+
+<div class="section materials">
+  <h2>Materials</h2>
+  <center>
+    <ul>
+      <li class="grid">
+        <div class="griditem">
+	  <a href="https://arxiv.org/abs/" target="_blank" class="imageLink"><img src="./segsort/paper.png"></a><br>
+          <a href="https://arxiv.org/abs/" target="_blank">Paper</a>
+        </div>
+      </li>
+    </ul>
+  </center>
+</div>
+
+<br>
+
+<div class="section code">
+  <h2>Code and Models</h2>
+  <center>
+    <ul>
+      <li class="grid">
+        <div class="griditem">
+	  <a href="https://github.com/jyhjinghwang/SegSort" target="_blank" class="imageLink"><img src="./common/code.png"></a><br>
+          <a href="https://github.com/jyhjinghwang/SegSort" target="_blank">Code</a>
+        </div>
+      </li>
+      <li class="grid">
+	<div class="griditem">
+          <a href="https://upenn.box.com/s/cke7o88jb7jsvfpsfv0ompp9ki21s25c" target="_blank" class="imageLink"><img src="../imgs/upenn.png"></a><br>
+          <a href="https://upenn.box.com/s/cke7o88jb7jsvfpsfv0ompp9ki21s25c" target="_blank">Models & Masks</a>
+        </div>
+      </li>
+    </ul>
+  </center>
+</div>
+
+<br>
+
+<div class="section citation">
+  <h2>Citation</h2>
+  <div class="section bibtex">
+    <pre>@inproceedings{segsort2019,
+ author = {Hwang, Jyh-Jing and Yu, Stella X. and Shi, Jianbo and Collins, Maxwell D. and Yang, Tien-Ju and Zhang, Xiao and Chen, Liang-Chieh},
+ title = {SegSort: Segmentation by Discriminative Sorting of Segments},
+ booktitle = {International Conference on Computer Vision (ICCV)},
+ month = {October},
+ year = {2019}
+}</pre>
+    </div>
+</div>
+
+<br>
+
+<div class="section materials">
+  <h2>Supervised SegSort Retrieval Results</h2>
+    <center><img src="./segsort/retrieval.png" border="0" width="90%"></center>
+</div>
+
+<br>
+<div class="section materials">
+  <h2>Supervised SegSort t-SNE Visualization</h2>
+    <center><img src="./segsort/sup_tsne_visualization.png" border="0" width="90%"></center>
+</div>
+
+<br>
+<div class="section materials">
+  <h2>Unsupervised SegSort Retrieval Results</h2>
+    <center><img src="./segsort/unsup_retrieval.png" border="0" width="90%"></center>
+</div>
+
+<br>
+<div class="section materials">
+  <h2>Unsupervised SegSort t-SNE Visualization</h2>
+    <center><img src="./segsort/unsup_tsne_visualization.png" border="0" width="90%"></center>
+</div>
+
+</body></html>
